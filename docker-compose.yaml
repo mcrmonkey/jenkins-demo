@@ -1,0 +1,15 @@
+services:
+  jenkins:
+    container_name: Jenkins
+    restart: always
+    tty: true
+    volumes:
+      - jenkins:/var/jenkins_home
+    build: ./jenkins
+
+    ports:
+      - "8080:8080"
+
+
+volumes:
+  jenkins:
